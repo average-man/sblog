@@ -1,0 +1,4 @@
+title: sblog
+description: average man's blog
+baseurl: "/sblog" # IMPORTANT: Must start with a /
+url: "[https://average-man.github.io](https://average-man.github.io)"
