@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{{ page.title }}</title>
+</head>
+
+<body>
+  <h1>{{ page.title }}</h1>
+  <p>{{ page.date | date_to_string }}</p>
+  <div>{{ content }}</div>
+  <hr>
+  <h2>Comments</h2>
+  <div id="comments-container">
+    <!-- Comments will be loaded here by JavaScript -->
+  </div>
+  <a href="[https://github.com/YOUR_USERNAME/YOUR_REPO/pull/](https://github.com/YOUR_USERNAME/YOUR_REPO/pull/){{ page.pr_number }}"
+    target="_blank">Leave a Comment on GitHub</a>
+
+  <script src="/assets/js/comments.js"></script>
+  <script>
+    const REPO_NAME = 'YOUR_USERNAME/YOUR_REPO';
+    const PR_NUMBER = {{ page.pr_number }};
+  </script>
+  <script src="/assets/js/comments.js"></script>
+</body>
+
+</html>
