@@ -13,14 +13,14 @@
   <div id="comments-container">
     <!-- Comments will be loaded here by JavaScript -->
   </div>
-  <a href="[https://github.com/average-man/sblog/pull/](https://github.com/average-man/sblog/pull/){{ page.pr_number }}" target="_blank">Leave a Comment on GitHub</a>
+  <a href="https://github.com/average-man/sblog/pull/{{ page.pr_number }}" target="_blank">Leave a Comment on GitHub</a>
 
   <!-- Script to fetch and display comments -->
-  <script src="[https://cdn.jsdelivr.net/npm/marked/marked.min.js](https://cdn.jsdelivr.net/npm/marked/marked.min.js)"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const REPO_NAME = 'average-man/sblog'; // Replace with your repo
-      const PR_NUMBER = {{ page.pr_number }}; // Corrected from 'pages' to 'page'
+      const REPO_NAME = 'average-man/sblog';
+      const PR_NUMBER = {{ page.pr_number }};
 
       if (!PR_NUMBER) {
         return; // Don't run on pages without a PR number
